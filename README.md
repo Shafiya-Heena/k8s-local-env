@@ -3,7 +3,6 @@
 A reproducible, YAML-driven Kubernetes setup for local development using Docker and kind.
 This repository demonstrates how to bootstrap a Kubernetes cluster and deploy applications using declarative manifests — aligned with real-world DevOps and SRE practices.
 
----
 
 ## 📌 Overview
 
@@ -17,7 +16,6 @@ This project provides:
 * Config management using ConfigMaps and Secrets
 * Scripted workflow for cluster lifecycle and deployments
 
----
 
 ## 🏗️ Architecture
 
@@ -37,7 +35,6 @@ Service (ClusterIP)
 kubectl port-forward → localhost:8080
 ```
 
----
 
 ## 📂 Repository Structure
 
@@ -61,7 +58,6 @@ kubectl port-forward → localhost:8080
 └── README.md
 ```
 
----
 
 ## ⚙️ Prerequisites
 
@@ -71,7 +67,6 @@ Ensure the following are installed:
 * kubectl
 * kind (if not using Docker Desktop Kubernetes)
 
----
 
 ## 🚀 Getting Started
 
@@ -81,23 +76,17 @@ Ensure the following are installed:
 ./scripts/create-cluster.sh
 ```
 
----
-
 ### 2. Deploy Application
 
 ```bash
 ./scripts/deploy.sh
 ```
 
----
-
 ### 3. Verify Deployment
 
 ```bash
 kubectl get all -n dev
 ```
-
----
 
 ### 4. Access Application
 
@@ -111,15 +100,11 @@ Open in browser:
 http://localhost:8080
 ```
 
----
-
 ### 5. Cleanup
 
 ```bash
 ./scripts/cleanup.sh
 ```
-
----
 
 ## 🧠 Key Concepts Demonstrated
 
@@ -131,19 +116,6 @@ http://localhost:8080
 * Local cluster simulation using containerized nodes
 * Separation of infrastructure and application layers
 
----
-
-## 🔄 Workflow
-
-```text
-GitHub (source of truth)
-   ↓
-kubectl apply -f k8s/
-   ↓
-Cluster state updated
-```
-
----
 
 ## 📈 Future Enhancements
 
@@ -154,7 +126,6 @@ Cluster state updated
 * Observability stack (Prometheus, Grafana, OpenTelemetry)
 * External Secrets / Vault integration
 
----
 
 ## ⚠️ Notes
 
@@ -162,7 +133,6 @@ Cluster state updated
 * Do not store production secrets in plain YAML
 * Use secure secret management solutions in real environments
 
----
 
 ## 👨‍💻 Author
 
